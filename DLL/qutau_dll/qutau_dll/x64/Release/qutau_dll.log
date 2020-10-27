@@ -1,0 +1,8 @@
+﻿  qutau_dll.cpp
+     Creating library C:\Users\sandy\Documents\Gogs\qutau_qunnect\DLL\qutau_dll\x64\Release\qutau_dll.lib and object C:\Users\sandy\Documents\Gogs\qutau_qunnect\DLL\qutau_dll\x64\Release\qutau_dll.exp
+  Generating code
+  2 of 3 functions (66.7%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  qutau_dll.vcxproj -> C:\Users\sandy\Documents\Gogs\qutau_qunnect\DLL\qutau_dll\x64\Release\qutau_dll.dll
