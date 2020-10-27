@@ -1,0 +1,6 @@
+name: qutau
+dependencies:
+    - python=3
+    - numpy 
+    - h5py 
+    - matplotlib 
