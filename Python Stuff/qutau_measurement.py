@@ -159,6 +159,9 @@ def get_profile(max_time, bin_width, tags_trig, tags_spcm):
         # Find the last tag in the SPCM vector which is smaller than the trigger plus the max time 
         going = True
         j = upper_pointer
+        # Make sure that j can't be negative
+        if j < 0:
+            j = 0
         while going:
             if rescaled_trig[k] + max_time_int >= rescaled_spcm[j]:
                 j += 1
