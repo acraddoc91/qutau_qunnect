@@ -118,8 +118,9 @@ def take_fake_data(runtime, channel_trig, channel_spcm):
 def get_profile(max_time, bin_width, tags_trig, tags_spcm):
     
     # Make sure bin_width is an integer multiple of the tagger bin width
-    tagger_width = 81e-12
-    
+    # tagger_width = 81e-12
+    tagger_width = 88.18e-12
+
     # Factor of 2 because there's some stupid issue with TDC chip with asymmetric bins
     act_bin_width_int = float(2*np.round(bin_width/(2*tagger_width)))
     max_time_int = int(np.round(max_time/(act_bin_width_int*tagger_width)))
