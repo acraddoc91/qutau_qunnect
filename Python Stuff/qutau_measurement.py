@@ -226,6 +226,21 @@ class MyDialog:
         self.result = self.e.get("1.0",'end-1c')
         self.top.destroy()
 
+## For Jupyter
+def run_experiment_jupyter(runtime, channel_trig, channel_spcm, max_time, bin_width, fake_data=False):
+    # First let's grab the data
+    if fake_data:
+        timestamps, channels = take_fake_data(runtime, channel_trig, channel_spcm)
+    else:
+        timestamps, channels = take_data(runtime, channel_trig, channel_spcm)
+
+    print("Collected data")
+    # Then get coincidence profile
+    tau, coinc = get_histogram(timestamps, channels, channel_trig, channel_spcm, max_time, bin_width)
+    print("Processed coincs")
+
+    return tau,coinc
+    
 ## Runs the experiment
 def run_experiment(runtime, channel_trig, channel_spcm, max_time, bin_width, fake_data=False, absolute_plotting=False):
 
